@@ -93,7 +93,7 @@ I learnt the importance of responsive design in morden web development. I Learnt
 I also learnt the best methods for cross-device compatibility using media queeries.
 
 
-To see how you can add code snippets, see below:
+
 
 ```html
    <ul class="links-menu">
