@@ -1,96 +1,164 @@
-*{
+/* Base styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", serif;
 }
 
-
-
-body{
-    background-color: Black;
-   
+body {
+    background-color: black;
 }
-#links-profile-container{
+
+#links-profile-container {
     margin: 5rem auto;
     width: 384px;
-    height: 550px;
     background-color: #141414;
     display: flex;
     align-items: center;
     flex-direction: column;
     border-radius: 8px;
-
+    padding-bottom: 2rem; /* Added padding for spacing */
 }
 
-.avatar-img{
+.avatar-img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     margin-top: 2rem;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    }
+}
 
-.profile-text{
+.profile-text {
     text-align: center;
     margin-top: 1rem;
 }
-.profile-text h1{
+
+.profile-text h1 {
     color: white;
     font-size: 24px;
     font-weight: bold;
-    margin-top: 1,5rem;
+    margin-top: 1.5rem; /* Corrected to use a dot for decimal */
 }
 
-.profile-text h4{
+.profile-text h4 {
     color: #C5F82A;
     font-size: 14px;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
 }
 
-.profile-text p{
+.profile-text p {
     color: white;
     font-size: 14px;
     margin-top: 1.5rem;
+    padding: 0 1rem; /* Added padding for better readability */
 }
 
-.profile-links-container{
+.profile-links-container {
     margin-top: 1.5rem;
-    
 }
 
-.links-menu li{
+.links-menu {
+    padding: 0;
+    margin: 0;
+}
+
+.links-menu li {
     list-style-type: none;
     width: 304px;
     height: 45px;
     text-align: center;
     margin: 1rem 0;
-
 }
 
-.links-menu li a{
-   background-color: #333333;
- text-decoration: none;
-color: white;
-width: 304px;
-height: 45px;
-display: flex;
-align-items: center;
-justify-content: center;
-border-radius: 4px;
-font-weight: 700;
-transition: all .2s ease-in-out;
+.links-menu li a {
+    background-color: #333333;
+    text-decoration: none;
+    color: white;
+    width: 304px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
 }
-.links-menu li a:hover{
+
+.links-menu li a:hover {
     background-color: #C5F82A;
     color: black;
 }
-.img{
+
+.img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Media Queries */
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    #links-profile-container {
+        width: 90%;
+        margin: 3rem auto;
+    }
+
+    .avatar-img {
+        width: 100px;
+        height: 100px;
+        margin-top: 1.5rem;
+    }
+
+    .profile-text h1 {
+        font-size: 22px;
+    }
+
+    .links-menu li {
+        width: 100%;
+    }
+
+    .links-menu li a {
+        width: 100%;
+    }
+}
+
+/* For screens smaller than 480px */
+@media screen and (max-width: 480px) {
+    #links-profile-container {
+        width: 100%;
+        margin: 2rem auto;
+    }
+
+    .avatar-img {
+        width: 80px;
+        height: 80px;
+        margin-top: 1rem;
+    }
+
+    .profile-text h1 {
+        font-size: 20px;
+    }
+
+    .profile-text h4,
+    .profile-text p {
+        font-size: 12px;
+        padding: 0 0.5rem;
+    }
+
+    .links-menu li {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .links-menu li a {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+    }
 }
 
  
